@@ -4,11 +4,11 @@ import { FavoriteStorageDTO } from "./FavoriteStoraegDTO";
 import { FAVORITE_COLLECTION } from "@storage/storageConfig";
 import { breedsGetFavoriteBreeds } from "./breedsGetFavoriteBreed";
 
-export async function breedAddToFavorite(newBreed: FavoriteStorageDTO) {
+export async function breedAddToFavorite(newBreed?: FavoriteStorageDTO) {
     try {        
         const storedBreeds = await breedsGetFavoriteBreeds();
 
-        const breedAlreadyInFavorites = storedBreeds.filter(breed => breed.breedName === newBreed.breedName)
+        const breedAlreadyInFavorites = storedBreeds.filter(breed => breed.breedName === newBreed?.breedName)
         
         
         if(breedAlreadyInFavorites.length > 0) throw new AppError('This breed is already a favorite');
@@ -18,7 +18,7 @@ export async function breedAddToFavorite(newBreed: FavoriteStorageDTO) {
         await AsyncStorage.setItem(FAVORITE_COLLECTION, storage);
 
         const newList = await breedsGetFavoriteBreeds()
-        const format = JSON.stringify([...newList])        
+        return newList        
 
     } catch(error) {
         throw(error);

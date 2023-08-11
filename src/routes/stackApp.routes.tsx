@@ -2,7 +2,6 @@ import  { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Breed } from "@screens/Breed";
 import { Favorites } from "@screens/Favorites";
 import { Home } from "@screens/Home";
-import { TabAppRoutes } from "./tabApp.routes";
 
 
 const  { Navigator, Screen } = createNativeStackNavigator();

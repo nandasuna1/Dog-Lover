@@ -1,4 +1,4 @@
 export type FavoriteStorageDTO = {
-    breedName: string,
+    breedName?: string,
     images: string[]
 }

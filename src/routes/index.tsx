@@ -1,19 +1,18 @@
-import { NavigationContainer } from '@react-navigation/native';
 import { View } from 'react-native';
-import { useTheme } from 'styled-components/native';
-import { TabAppRoutes } from './tabApp.routes';
+import { NavigationContainer } from '@react-navigation/native';
 import { StackAppRoutes } from './stackApp.routes';
+import { BreedProvider } from '@context/favoriteBreedsContext';
 
 
 
 export function Routes() {
-    const {COLORS} = useTheme();
     return (
         <View style={{flex:1, paddingTop: 50, backgroundColor: 'antiquewhite'}}>
-            <NavigationContainer >
-                {/* <TabAppRoutes /> */}
-                <StackAppRoutes />
-            </NavigationContainer>
+            <BreedProvider>
+                <NavigationContainer >
+                    <StackAppRoutes />
+                </NavigationContainer>
+            </BreedProvider>
         </View>
     )
 };

@@ -1,7 +1,6 @@
 import { useFonts, Roboto_400Regular, Roboto_700Bold} from '@expo-google-fonts/roboto'
 import { Routes } from '@routes/index';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { Loading } from '@components/Loading';
 import theme from '@theme/index';
 import { ThemeProvider } from 'styled-components/native';

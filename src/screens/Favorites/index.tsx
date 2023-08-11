@@ -62,10 +62,3 @@ export function Favorites() {
         </Container>
     )
 }
-
-
-
-
-const stringUrl = 'https://i0.statig.com.br/bancodeimagens/0w/c2/sj/0wc2sj3c14m22hlnf0ze4tjg8.jpg'
-const dogs = [{id: '1', imgUrl: stringUrl}, {id: '2', imgUrl: stringUrl}, {id: '3', imgUrl: stringUrl}, {id: '4', imgUrl: stringUrl}, {id: '5', imgUrl: stringUrl}, {id: '6', imgUrl: stringUrl}, {id: '7', imgUrl: stringUrl}]
-const dogsArr = [{dogBreed: 'cachorro', dogs: dogs}, {dogBreed: 'cachorro2', dogs: dogs}, {dogBreed: 'cachorro3', dogs: dogs}]
